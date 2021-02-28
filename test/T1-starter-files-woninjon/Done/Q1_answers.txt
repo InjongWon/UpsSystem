@@ -1,0 +1,46 @@
+Q1a)
+
+1.
+def shopAndCook(recipe: Recipe):
+	recipe.shop_for("hi")
+	recipe.cook("hi")
+
+recipe.cook("hi") is polymorphic. Any object with a type that belongs to the "Recipe" hiearchy 
+can be inputted into this function.
+
+2.
+We must implement cook because it's an unimplemented abstract method.
+
+3.
+Appetizer might have class variables unique to itself and not found in the generic
+Recipe class. In this case, it will need to define its own initializer to initialize those
+class variables.
+
+Q1b)
+testlst = list(lst)
+before = testlst.count(item)
+testlst.append(item)
+after = testlst.count(item)
+assert (before + 1) == after
+
+=====================================
+ALTERNATIVE (if count() can't be used)
+
+testlst = list(lst)
+before = 0
+after = 0
+for x in testlst:
+	if x == item:
+		before += 1
+testlst.append(item)
+for x in testlst:
+	if x == item:
+		after += 1
+assert (before + 1) == after
+
+Q1c)
+
+1. 5
+2. 4
+
+
